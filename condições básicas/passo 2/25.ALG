@@ -12,13 +12,12 @@ Algoritmo "25"
 // Data atual  : 06/02/2023
 Var
    l1,l2,l3:inteiro
-       tri:logico
+
 
 Inicio
 
    escreval("vamos formar um triangulo?")
    escreval()
-
    escreva("Digite o lado 1 :")
    leia(l1)
    escreva("Digite o lado 2 :")
@@ -27,10 +26,9 @@ Inicio
    leia(l3)
 
    se(l1< l2 + l3) e (l2< l1+l3) e (l3< l1+l2)  entao
-   tri<-verdadeiro
-      escreval("forma um triangulo ",tri)
+      escreval("forma um triangulo")
    senao
-      escreval("nao forma um triangulo ",tri)
+      escreval("nao forma um triangulo")
    fimse
 
 
