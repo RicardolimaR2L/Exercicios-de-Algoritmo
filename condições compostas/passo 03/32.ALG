@@ -1,4 +1,4 @@
-Algoritmo "semnome"
+Algoritmo "32"
 //
 //
 // Descrição   :
@@ -35,7 +35,6 @@ Inicio
          escreval("Número da sorte",N_sorte)
          escreva("Você ACERTOU")
       senao
-         escreval("Número da sorte:",N_sorte)
          escreval("Você ERROU ")
       fimse
 
