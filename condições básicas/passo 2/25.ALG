@@ -26,9 +26,9 @@ Inicio
    leia(l3)
 
    se(l1< l2 + l3) e (l2< l1+l3) e (l3< l1+l2)  entao
-      escreval("forma um triangulo")
+      escreval(" pode formar um triangulo")
    senao
-      escreval("nao forma um triangulo")
+      escreval("não  pode forma um triangulo")
    fimse
 
 
