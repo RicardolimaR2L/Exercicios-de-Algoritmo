@@ -1,4 +1,6 @@
 Algoritmo "31"
+//  
+//  
 //
 //
 // Descrição   :  [DESAFIO] Crie um jogo de JoKenPo (Pedra-Papel-Tesoura)
@@ -10,13 +12,13 @@ Algoritmo "31"
 // Autor(a)    : Ricardo Lima
 // Data atual  : 12/02/2023
 Var
-   p1:inteiro
-   pc:inteiro
+   pc,p1:inteiro
+   resp:caractere
 
 
 Inicio
 
-
+     REPITA
    escreval("======================")
    escreval("       JOKENPO     ")
    escreval("======================")
@@ -33,63 +35,69 @@ Inicio
    leia (pc)
    aleatorio off
 
-   se( p1 = 1 )e( pc = 2 ) entao
-      escrevaL("Você Escolheu: PEDRA ")
-      escreval("Computador Escolheu: PAPEL" )
-      escreval(" você PERDEU ")
+   //bloco de empates
+   se( p1 = 1 )e( pc = 1 )entao
+      escreval(" Você Escolheu: PEDRA")
+      escreval(" Computador Escolheu: PEDRA ")
+      Escreval("EMPATOU")
    senao
-      se(p1=2) e(pc = 1 ) entao
-         escrevaL(" Você Escolheu: PAPEL ")
-         escreval(" Computador EScolheu: PEDRA" )
-         escreval("Você GANHOU ")
+      se(p1 =2 )e ( pc = 2 ) entao
+         escreval(" Você Escolheu: PAPEL")
+         escreval(" Computador Escolheu: PAPEL ")
+         Escreval("EMPATOU")
+      fimse
+      se( p1 = 3 )e( pc=3 )entao
+         escreval(" Você Escolheu: TESOURA")
+         escreval(" Computador Escolheu: TESOURA ")
+         Escreval("EMPATOU")
+      fimse
+   fimse
+
+   //bloco de vitórias
+   se(p1=1)e(pc = 3 )entao
+      escreval("Você Escolheu: PEDRA")
+      escreval("Computador Escolheu: TESOURA")
+      escreval("você GANHOU")
+   senao
+      se(p1 = 2 ) e (pc = 1)entao
+         escreval("Você escolheu: PAPEL")
+         escreval("Computador escolheu: PEDRA")
+         escreval("Você GANHOU")
       senao
-         se(p1=1 )e( pc = 1)entao
-            escreval(" EMPATOU ")
-         senao
-            se(p1 = 2)e (pc = 1) entao
-               escreval(" Você Escolheu: PAPEL")
-               escreval(" Computador EScolheu: PEDRA")
-               escreval(" vc ganhou")
-            senao
-               se(p1 = 2)e(pc = 3)entao
-                  escreval("Você Escolheu: PAPEL")
-                  escreval("Computador EScolheu: TESOURA ")
-                  escreva("vc perdeu")
-               senao
-                  se(p1 = 3 )e (pc = 3)entao
-                     escreva("empatou")
-                  senao
-                     se(p1 =3 )e (pc =2)entao
-                        escreval("Você Escolheu :tesoura")
-                        escreval("Computador EScolheu: papel ")
-                        escreva("vc ganhou")
-                     senao
-                        se(p1 = 2) e (pc =3 )entao
-                           escreval("Você Escolheu papel")
-                           escreval("Computador EScolheu: tesoura")
-                           escreval("vc perde")
-                        senao
-                           se(p1=2) e (pc =2) entao
-                              escreval("EMPATOU")
-                           senao
-                              se(p1 =3) e (pc =1) entao
-                                 escreval(" Você Escolheu: tesoura ")
-                                 escreval(" Computador EScolheu: pedra ")
-                                 escreval("vc perdeu")
-                              senao
-                                 se(p1= 1)e( pc = 3)entao
-                                    escreval(" VOCÊ EScolheu::PEDRA ")
-                                    escreval("Computador EScolheu: tesoura")
-                                    escreval(" voce: Ganhou")
-                                 fimse
-                              fimse
-                           fimse
-                        fimse
-                     fimse
-                  fimse
-               fimse
-            fimse
+         se(p1= 3)e (pc =2)entao
+            escreval("Você Escolheu: TESOURA")
+            escreval("Computador Escolheu: PAPEL")
+            escreval("Você GANHOU")
          fimse
       fimse
    fimse
-Fimalgoritmo
+   
+   //bloco de Derotas
+
+   se(p1=1)e(pc = 2 )entao
+      escreval("Você Escolheu: PEDRA")
+      escreval("Computador Escolheu: PAPEL ")
+      escreval("Você PERDEU")
+   senao
+      se(p1 = 2 ) e (pc = 3)entao
+         escreval("Você Escolheu: PAPEL")
+         escreval("Computador Escolheu:TESOURA")
+         escreval("voce GANHOU")
+      senao
+         se(p1= 3)e (pc =1)entao
+            escreval("Você escolheu: TESOURA")
+            escreval("Computador escolheu: PAPEL")
+            escreval("você PERDEU")
+         fimse
+      fimse
+   fimse
+    escreval()
+   escreval("JOGAR NOVAMENTE ? [S/N] ")
+
+   escreval()
+   leia(resp)
+ate(resp = "n")
+   
+
+
+fimalgoritmo
