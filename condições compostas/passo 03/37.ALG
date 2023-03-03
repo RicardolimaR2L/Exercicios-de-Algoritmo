@@ -70,8 +70,8 @@ Inicio
       fimse
    fimse
    escreval("Nome:",nome)
-   escreval("você é:", sexo)
-   escreval("você tem",anos," anos de empresa ")
-   escreval(" Seu novo salario é:R$",sal)
+   escreval("Você é:", sexo)
+   escreval("Você tem",anos," anos de empresa ")
+   escreval("Seu novo salario é:R$",sal)
 
 Fimalgoritmo
